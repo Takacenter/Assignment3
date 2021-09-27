@@ -59,14 +59,14 @@ public class PacManMovement : MonoBehaviour
         {
 
 
-            pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np1.transform.position, 0.8f);
+            pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np1.transform.position, 4f);
 
         }
 
         if (px < np3.transform.position.x && py == np2.transform.position.y)
         {
 
-            pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np3.transform.position, 1.5f);
+            pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np3.transform.position, 4f);
 
 
         }
@@ -77,7 +77,7 @@ public class PacManMovement : MonoBehaviour
         if (py < np2.transform.position.y && px == np1.transform.position.x)
         {
 
-            pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np2.transform.position, 0.8f);
+            pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np2.transform.position, 4f);
 
 
 
@@ -87,7 +87,7 @@ public class PacManMovement : MonoBehaviour
         if (py> np4.transform.position.y && px == np3.transform.position.x)
         {
 
-            pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np4.transform.position, 1.5f);
+            pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np4.transform.position,4f);
 
 
 
