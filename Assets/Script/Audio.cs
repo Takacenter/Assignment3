@@ -13,8 +13,9 @@ public class Audio : MonoBehaviour
 
     void Start()
     {
-       
         MusicPlay();
+        
+
     }
 
 
@@ -30,5 +31,6 @@ public class Audio : MonoBehaviour
         GHOST.clip = ghost;
         BGM.PlayScheduled(playTime);
         GHOST.PlayScheduled(playTime + BGM.clip.length);
+     
     }
 }

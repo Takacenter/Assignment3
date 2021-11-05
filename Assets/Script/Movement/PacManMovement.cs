@@ -22,7 +22,7 @@ public class PacManMovement : MonoBehaviour
     {
         pmtweener = GetComponent<pmTweener>();
 
-        // np1 is the bottom-left corener pellet, 
+        //np1 is the bottom-left corener pellet, 
         //np2 is the top-left corener pellet, 
         //np3 is the top-right corener pellet.
         //np4 is the bottom-right corener pellet.
@@ -34,7 +34,7 @@ public class PacManMovement : MonoBehaviour
         np4 = GameObject.FindWithTag("Normal pellet4");
 
         // the music of movement
-        BGM.Play();
+        
      
 
     }
@@ -47,9 +47,10 @@ public class PacManMovement : MonoBehaviour
         py = pacman.transform.position.y;
 
         Left_and_right_dir();
-        Up_and_Down_dir();
+        
         pmAnim();
 
+        
 
     }
     // the left and right direction of pac man
@@ -58,41 +59,48 @@ public class PacManMovement : MonoBehaviour
         if (px > np1.transform.position.x && py == np4.transform.position.y)
         {
 
-
-            pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np1.transform.position, 4f);
-
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np1.transform.position, 4f);
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np4.transform.position, 4f);
+            }
         }
 
-        if (px < np3.transform.position.x && py == np2.transform.position.y)
+       /*** if (px < np3.transform.position.x && py == np2.transform.position.y && Input.GetKeyDown(KeyCode.D))
         {
 
             pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np3.transform.position, 4f);
+           
 
-
-        }
+        }***/
+      
     }
     // the up and down direction of pac man
     void Up_and_Down_dir()
     {
-        if (py < np2.transform.position.y && px == np1.transform.position.x)
+        if (py < np2.transform.position.y && px == np1.transform.position.x && Input.GetKeyDown(KeyCode.W))
         {
 
             pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np2.transform.position, 4f);
 
-
+          
 
         }
 
 
-        if (py> np4.transform.position.y && px == np3.transform.position.x)
+        if (py> np4.transform.position.y && px == np3.transform.position.x && Input.GetKeyDown(KeyCode.S))
         {
 
             pmtweener.AddPacMan(pacman.transform, pacman.transform.position, np4.transform.position,4f);
 
-
+           
 
 
         }
+      
     }
 
     // animation of pacman
