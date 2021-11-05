@@ -57,7 +57,11 @@
     <Compile Include="Assets\Script\Movement\PacManMovement.cs" />
     <Compile Include="Assets\Script\Audio.cs" />
     <Compile Include="Assets\Script\Movement\pmTween.cs" />
+    <Compile Include="Assets\Script\Hidden_scared_time.cs" />
     <Compile Include="Assets\Script\LevelGenerator.cs" />
+    <Compile Include="Assets\Script\UIManager.cs" />
+    <Compile Include="Assets\Script\PacStudentController.cs" />
+    <Compile Include="Assets\Script\Pacdot.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -8,6 +8,12 @@ TagManager:
   - Normal pellet2
   - Normal pellet3
   - Normal pellet4
+  - Button_Level1
+  - Score
+  - Timer
+  - Scared
+  - QuitButton
+  - Outside_walls
   layers:
   - Default
   - TransparentFX
